@@ -1,3 +1,4 @@
+package evaluation;
 
 public interface Specimen {
 

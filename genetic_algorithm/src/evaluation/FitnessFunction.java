@@ -1,3 +1,5 @@
+package evaluation;
+
 /* interface for making a fitness function */
 public interface FitnessFunction {
     

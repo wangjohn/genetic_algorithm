@@ -1,3 +1,5 @@
+package evaluation;
+
 
 public abstract class FitnessScore {
 
