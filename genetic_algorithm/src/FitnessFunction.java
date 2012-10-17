@@ -10,5 +10,4 @@ public interface FitnessFunction {
      */
     public FitnessScore getScore(Specimen s);
     
-    public 
 }
