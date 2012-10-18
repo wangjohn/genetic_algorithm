@@ -1,6 +1,6 @@
 package interval_tree;
 
-public class DoubleInterval {
+public class DoubleInterval implements Comparable<DoubleInterval> {
 
     private final double x;
     private final double y;
@@ -48,6 +48,19 @@ public class DoubleInterval {
             return 0;
         } else {
             return 1;
+        }
+    }
+
+    public int compareTo(DoubleInterval o) {
+        double thisMidpoint = this.midpoint;
+        double thatMidpoint = o.getMidpoint();
+        
+        if (thisMidpoint < thatMidpoint){
+            return -1;
+        } else if (thisMidpoint > thatMidpoint){
+            return 1;
+        } else {
+            return 0;
         }
     }
 }
