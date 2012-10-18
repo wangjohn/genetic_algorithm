@@ -33,4 +33,11 @@ public abstract class TimeEpoch {
      */
     public abstract TimeEpoch getNextEpoch();
     
+    /**
+     * 
+     * @return The maximum number of specimens possible in this population.
+     * 
+     */
+    public abstract int getMaxPopulation();
+    
 }
