@@ -109,10 +109,4 @@ public class DoubleIntervalTree {
         // If we ever reach a null child, then we return null as well
         return null;
     }
-    
-    class IntersectingIntervalException extends Exception{
-        public IntersectingIntervalException(String s){
-            super(s);
-        }
-    }
 }

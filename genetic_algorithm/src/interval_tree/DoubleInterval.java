@@ -1,15 +1,29 @@
 package interval_tree;
 
+import evaluation.Specimen;
+
 public class DoubleInterval implements Comparable<DoubleInterval> {
 
     private final double x;
     private final double y;
     private final double midpoint;
+    private Specimen data = null;
+    
+    public DoubleInterval(Double x, Double y, Specimen data){
+        this.x = x;
+        this.y = y;
+        this.midpoint = (x+y)/2;
+        this.data = data;
+    }
     
     public DoubleInterval(Double x, Double y){
         this.x = x;
         this.y = y;
         this.midpoint = (x+y)/2;
+    }
+    
+    public Specimen getData(){
+        return data;
     }
     
     public double getX(){
