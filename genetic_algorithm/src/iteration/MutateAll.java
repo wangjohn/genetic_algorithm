@@ -15,30 +15,19 @@ import random_sampling.RandomSample;
 
 import evaluation.Specimen;
 
-public class MutateAll implements BreedingMethod {
+public class MutateAll extends BreedingMethod {
 
     private final List<Specimen> oldSpecimens; 
     private final int currentPopulationSize;
     private double mutationRate = 0.3;
-   
-    /**
-     * Constructor for a list of specimens
-     * @param oldSpecimens
-     */
-    public MutateAll(List <Specimen> oldSpecimens){
-        this.oldSpecimens = oldSpecimens;
-        this.currentPopulationSize = oldSpecimens.size();
-    }
     
-    /**
-     * Constructor for a list of specimens and a mutation rate
-     * @param oldSpecimens
-     */
-    public MutateAll(List <Specimen> oldSpecimens, double mutationRate){
+    public MutateAll(List<Specimen> oldSpecimens) {
+        super(oldSpecimens);
         this.oldSpecimens = oldSpecimens;
-        this.mutationRate = mutationRate;
         this.currentPopulationSize = oldSpecimens.size();
+        // TODO Auto-generated constructor stub
     }
+
     
     public int getNumberToBreed() {
         // Under this implementation, we will be creating a new specimen from each old specimen
