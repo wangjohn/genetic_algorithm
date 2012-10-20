@@ -1,6 +1,8 @@
 package iteration;
 
 import java.util.List;
+
+import random_sampling.InvalidProbabilityArgumentException;
 import evaluation.Specimen;
 
 public interface BreedingMethod {
@@ -25,6 +27,7 @@ public interface BreedingMethod {
      * 
      * @param oldSpecimens List of the specimens that will create a new breed
      * @return The new specimens that have been bred from oldSpecimens
+     * @throws Exception 
      */
-    public abstract List <Specimen> getNewBreededSpecimens(List <Specimen> oldSpecimens);
+    public abstract List <Specimen> getNewBreededSpecimens() throws Exception;
 }
